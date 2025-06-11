@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Darumadrop+One&display=swap" rel="stylesheet">
+ <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+
+    <style>
+        *{
+            font-family: "Darumadrop One", sans-serif;
+        }
+        .calc {
+            margin: 50px 500px;
+            background-color: rgb(149, 240, 149);
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgb(0 0 0 / 0.05);
+            padding: 2rem 2.5rem;
+            box-sizing: border-box;
+            
+        }
+
+        h1 {
+            font-weight: 700;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #111827;
+            text-align: center;
+        }
+
+        p.subtitle {
+            color: #6b7280;
+            font-size: 1rem;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 2rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.25rem;
+            font-weight: 600;
+            color: #4b5563;
+            font-size: 0.9rem;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 0.5rem 0.75rem;
+            font-size: 1.125rem;
+            border: 1.5px solid #d1d5db;
+            border-radius: 0.75rem;
+            outline-offset: 2px;
+            outline-color: transparent;
+            transition: outline-color 0.3s ease, border-color 0.3s ease;
+        }
+
+        input[type="number"]:focus {
+            border-color: #FF00FF;
+            outline-color: #FF00FF;
+        }
+
+        .button-group {
+            margin-top: 2.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        button {
+            flex: 1 1 45%;
+            padding: 0.75rem 1rem;
+            font-size: 1rem;
+            font-weight: 700;
+            color: #ffffff;
+            background-color: #2563eb;
+            border: none;
+            border-radius: 0.75rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            user-select: none;
+            min-width: 100px;
+        }
+
+        button:hover,
+        button:focus {
+            background-color: #FF00FF;
+            outline: none;
+        }
+
+        #answer {
+            margin-top: 2rem;
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: #374151;
+            background: #e0e7ff;
+            padding: 1rem;
+            border-radius: 0.75rem;
+            text-align: center;
+            min-height: 2rem;
+            user-select: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="calc animate__animated animate__zoomInUp" role="main">
+        <h1>Dummy Calculator</h1>
+        <p class="subtitle">Calculate as you see fit.</p>
+        <label for="numberOne">First Number</label>
+        <input type="number" id="numberOne" placeholder="Enter first number" />
+        <label for="numberTwo" style="margin-top:1rem;">Second Number</label>
+        <input type="number" id="numberTwo" placeholder="Enter second number" />
+        <div class="button-group" role="group" aria-label="Calculator operations">
+            <button type="button" onclick="add()">ADD</button>
+            <button type="button" onclick="subtract()">SUBTRACT</button>
+            <button type="button" onclick="multiply()">MULTIPLY</button>
+            <button type="button" onclick="divide()">DIVIDE</button>
+        </div>
+        <div id="answer" aria-live="polite" aria-atomic="true">Maybe your result will appear here</div>
+    </div>
+
+
+
+    <script src="script2.js"></script>
+</body>
+
+</html>
